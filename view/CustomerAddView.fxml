@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerAddController">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Label fx:id="ttlLbl" layoutX="55.0" layoutY="35.0" text="Add Customer">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="IDLbl" layoutX="66.0" layoutY="86.0" text="ID" />
+                <Label fx:id="nmLbl" layoutX="66.0" layoutY="132.0" text="Name" />
+                <Label fx:id="addrssLbl" layoutX="63.0" layoutY="181.0" prefHeight="25.0" prefWidth="58.0" text="Address" />
+                <Label fx:id="pstlCdLbl" layoutX="357.0" layoutY="185.0" text="Postal Code" />
+                <Label fx:id="phnNmbrLbl" layoutX="56.0" layoutY="272.0" text="Phone Number" />
+                <TextField fx:id="idTextField" disable="true" layoutX="141.0" layoutY="82.0" promptText="Auto Gen - Disabled" />
+                <TextField fx:id="nameTextField" layoutX="140.0" layoutY="128.0" prefHeight="25.0" prefWidth="210.0" />
+                <TextField fx:id="addressTextField" layoutX="137.0" layoutY="181.0" prefHeight="25.0" prefWidth="210.0" />
+                <TextField fx:id="postCodeTextField" layoutX="431.0" layoutY="181.0" />
+                <ComboBox fx:id="countryComboBox" layoutX="138.0" layoutY="216.0" onAction="#selectCountry" prefHeight="25.0" prefWidth="210.0" promptText="Select Country">
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </ComboBox>
+                <ComboBox fx:id="firstLevelDivisionComboBox" layoutX="371.0" layoutY="216.0" onAction="#selectFirstLevelDivision" prefHeight="25.0" prefWidth="210.0" promptText="Choose First-Level Division">
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </ComboBox>
+                <TextField fx:id="phoneNumberTextField" layoutX="142.0" layoutY="268.0" prefHeight="25.0" prefWidth="210.0" />
+                <Button fx:id="saveCustomerBtn" layoutX="322.0" layoutY="337.0" onAction="#saveCustomer" text="Save" />
+                <Button fx:id="cancelBtn" layoutX="385.0" layoutY="337.0" mnemonicParsing="false" onAction="#cancelAddCustomer" text="Cancel" />
+                <TextArea fx:id="errorTxtBx" layoutX="310.0" layoutY="82.0" prefHeight="142.0" prefWidth="323.0" visible="false" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
